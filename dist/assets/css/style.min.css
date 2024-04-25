@@ -2512,11 +2512,10 @@ select {
 }
 .header__top-info-inner a,
 .header__top-info-inner span {
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 110%;
+  color: var(--white);
 }
 
 .header__top-info-container {
