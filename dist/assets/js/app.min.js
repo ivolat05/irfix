@@ -393,7 +393,7 @@ const swiperMain = () => {
 
 swiperMain();
 
-		const brendSwiper = () => {
+	const brendSwiper = () => {
 	const brendSwiperWrapp = document.querySelector(".brend__coll-swiper");
 	const installSwiper = {
 		spaceBetween: 20,
@@ -443,5 +443,87 @@ swiperMain();
 	}
 };
 brendSwiper();
+
+	const produceSwiper = () => {
+	const produceSwiperWripper = document.querySelectorAll(".produce__swiper");
+	const installSwipProduce = {
+		slidesPerView: 3,
+		grid: {
+			rows: 2,
+			fill: "row",
+		},
+		spaceBetween: 20,
+		scrollbar: {
+			el: ".swiper-scrollbar",
+		},
+
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 15,
+				grid: {
+					rows: 2,
+					fill: "row",
+				},
+			},
+
+			870: {
+				slidesPerView: 2,
+				spaceBetween: 15,
+				grid: {
+					rows: 2,
+					fill: "row",
+				},
+			},
+
+			1300: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				grid: {
+					rows: 2,
+					fill: "row",
+				},
+			},
+		},
+	};
+	if (produceSwiperWripper) {
+		produceSwiperWripper.forEach((swipProduce) => {
+			new Swiper(swipProduce, installSwipProduce);
+		});
+	}
+};
+produceSwiper();
+
+	const tab = () => {
+	const input = document.querySelectorAll(".tab-input");
+	if (input) {
+		tabActive(input);
+		input.forEach((item) => {
+			item.addEventListener("input", () => {
+				tabActive(input);
+			});
+		});
+	}
+};
+tab();
+
+function tabDeactive() {
+	const tab = document.querySelectorAll(".tab__conataienr");
+	if (tab) {
+		tab.forEach((item) => {
+			item.classList.remove("--active");
+		});
+	}
+}
+function tabActive(inputs) {
+	tabDeactive();
+	inputs.forEach((item) => {
+		if (item.checked) {
+			let dataTab = item.getAttribute("data-input-tab");
+			let id = document.getElementById(dataTab);
+			id.classList.add("--active");
+		}
+	});
+}
 
 });
