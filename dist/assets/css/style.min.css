@@ -1174,7 +1174,7 @@ button.swiper-pagination-bullet {
   --charcoal: #484848;
   --dark-slate-blue: #2C2B72;
   --dark-charcoal: #161436;
-  --light-gray: #A3A3A3;
+  --light-gray-2: #A3A3A3;
 }
 
 .page {
@@ -1465,6 +1465,42 @@ select {
   color: rgba(0, 0, 0, 0) !important;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--white);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 30px;
+}
+
+.swiper-scrollbar .swiper-scrollbar-drag {
+  background: var(--midnight-blue);
+}
+
+.swiper-pagination {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+@media (max-width: 1370px) {
+  .swiper-pagination {
+    padding-top: 32px;
+    padding-bottom: 25px;
+  }
+}
+.swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+  border: 1px solid var(--forest-green);
+  background: var(--forest-green);
+}
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--dark-blue);
+  width: 37px;
+  border-radius: 60px;
 }
 
 .modal-background {
@@ -4802,5 +4838,158 @@ select {
     max-width: 380px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.brend {
+  padding-top: 55px;
+}
+
+.brend-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 110%;
+  padding-top: 30px;
+}
+
+.brend__box-img {
+  width: 100%;
+}
+.brend__box-img img {
+  width: 100%;
+}
+@media (max-width: 1019px) {
+  .brend__box-img {
+    width: 380px;
+  }
+}
+@media (max-width: 580px) {
+  .brend__box-img {
+    width: 100%;
+  }
+}
+
+.brend__box-title {
+  padding-top: 15px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 110%;
+}
+
+.brend__box-text {
+  padding-top: 30px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.brend-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 545px;
+  grid-template-columns: 1fr 545px;
+  gap: 20px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+@media (max-width: 1400px) {
+  .brend-row {
+    -ms-grid-columns: 1fr 445px;
+    grid-template-columns: 1fr 445px;
+  }
+}
+@media (max-width: 1200px) {
+  .brend-row {
+    -ms-grid-columns: 1fr 380px;
+    grid-template-columns: 1fr 380px;
+  }
+}
+@media (max-width: 1020px) {
+  .brend-row {
+    display: block;
+  }
+}
+
+@media (max-width: 1019px) {
+  .brend__coll-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100px !important;
+    width: auto !important;
+  }
+  .brend__coll-link img {
+    width: auto;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+.brend__swiper-scrollbar {
+  position: relative !important;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1019px) {
+  .brend__coll {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .brend__coll-link {
+    width: auto;
+    height: auto;
+    max-height: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .brend__coll-wrapp {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 60px;
+    gap: 50px;
+  }
+}
+@media (min-width: 1020px) and (max-width: 1200px) {
+  .brend__coll-wrapp {
+    gap: 20px;
+  }
+}
+@media (min-width: 1020px) {
+  .brend__swiper-scrollbar {
+    display: none;
+  }
+}
+@media (min-width: 1020px) {
+  .brend__coll-link {
+    width: 25% !important;
+  }
+  .brend__coll-link:nth-child(2) {
+    width: 64% !important;
+  }
+  .brend__coll-link:nth-child(3) {
+    width: 44% !important;
+  }
+  .brend__coll-link:nth-child(4) {
+    width: 43% !important;
+  }
+  .brend__coll-link img {
+    width: 100% !important;
   }
 }

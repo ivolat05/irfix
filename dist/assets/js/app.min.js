@@ -393,4 +393,55 @@ const swiperMain = () => {
 
 swiperMain();
 
+		const brendSwiper = () => {
+	const brendSwiperWrapp = document.querySelector(".brend__coll-swiper");
+	const installSwiper = {
+		spaceBetween: 20,
+		slidesPerView: 3,
+		scrollbar: {
+			el: ".brend__swiper-scrollbar",
+		},
+		freeMode: true,
+		mousewheel: true,
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 15,
+			},
+			580: {
+				slidesPerView: 2,
+				spaceBetween: 15,
+			},
+			735: {
+				slidesPerView: 3,
+				spaceBetween: 15,
+			},
+
+			1020: {
+				spaceBetween: 0,
+			},
+		},
+	};
+	if (brendSwiperWrapp) {
+		const swiperBrend = new Swiper(brendSwiperWrapp, installSwiper);
+		// активация деактивация слайдера  при различных разрешения экрана
+		if (window.innerWidth <= 1020) {
+			swiperBrend.enable();
+		} else {
+			swiperBrend.disable();
+		}
+		swiperBrend.update();
+		window.addEventListener("resize", () => {
+			if (window.innerWidth <= 1020) {
+				swiperBrend.enable();
+				swiperBrend.update();
+			} else {
+				swiperBrend.disable();
+				swiperBrend.update();
+			}
+		});
+	}
+};
+brendSwiper();
+
 });
