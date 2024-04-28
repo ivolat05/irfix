@@ -629,6 +629,44 @@ clientsSwiper();
 };
 blogSwiper();
 
+	// main swiper
+const swiperCard = () => {
+	const cardSwiperTop = document.querySelector(".card__top-swiper");
+	const cardSwiperBootom = document.querySelector(".card__bottom-swiper");
 
-	
+	if (cardSwiperTop && cardSwiperBootom) {
+		const swiperBottomCard = new Swiper(cardSwiperBootom, {
+			spaceBetween: 0,
+			slidesPerView: 3,
+			breakpoints: {
+				320: {},
+
+				572: {},
+
+				900: {},
+			},
+		});
+		const swiperTopCard = new Swiper(cardSwiperTop, {
+			spaceBetween: 0,
+			slidesPerView: 1,
+			pagination: {
+				el: ".card__top-pagination",
+				type: "bullets",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".card-button-next",
+				prevEl: ".card-button-prev",
+			},
+
+			thumbs: {
+				swiper: swiperBottomCard,
+			},
+		});
+	}
+};
+
+swiperCard();
+
+
 });
