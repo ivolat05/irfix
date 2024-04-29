@@ -6589,6 +6589,23 @@ input:checked + .produce__tab-span::after {
   line-height: inherit;
 }
 
+.produce__swiper-inner .commodity__swiper-inner {
+  height: 100%;
+  width: 100%;
+  padding: 20px 10px;
+}
+.produce__swiper-inner .commodity__swiper-img {
+  background: var(--white);
+  aspect-ratio: 160/70;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media (max-width: 572px) {
+  .produce__swiper-inner .commodity__swiper-img {
+    aspect-ratio: 160/80;
+  }
+}
+
 .production {
   padding-top: 65px;
   padding-bottom: 55px;
@@ -8826,10 +8843,10 @@ input:checked + .produce__tab-span::after {
 }
 @media screen and (min-width: 300px) and (max-width: 700px) {
   .strainer__box {
-    background: url("../../assets/img/cross.svg") no-repeat top -101px left -98px, url("../../assets/img/cross.svg") no-repeat bottom -100px left -98px, url("../../assets/img/cross.svg") no-repeat top -101px right -102px, url("../../assets/img/cross.svg") no-repeat bottom -100px right -102px;
+    background: url("../../assets/img/cross.svg") no-repeat top -101px left -97px, url("../../assets/img/cross.svg") no-repeat bottom -100px left -97px, url("../../assets/img/cross.svg") no-repeat top -101px right -100px, url("../../assets/img/cross.svg") no-repeat bottom -100px right -100px;
   }
   .strainer__box:nth-child(1) {
-    background: url("../../assets/img/cross.svg") no-repeat bottom -100px right -102px, url("../../assets/img/cross.svg") no-repeat bottom -100px left -98px;
+    background: url("../../assets/img/cross.svg") no-repeat bottom -100px right -100px, url("../../assets/img/cross.svg") no-repeat bottom -100px left -97px;
   }
 }
 .strainer__box:hover {
