@@ -2608,6 +2608,7 @@ select {
   position: relative;
   padding-top: 5px;
   padding-bottom: 5px;
+  z-index: 0;
 }
 @media (max-width: 1370px) {
   .swiper-pagination {
@@ -6681,6 +6682,15 @@ input:checked + .produce__tab-span::after {
 }
 .produce__swiper--commodity.commodity__swiper .commodity__swiper-inner {
   padding: 20px 10px;
+}
+
+.produce__swiper--strainer.produce__swiper--commodity {
+  overflow: visible;
+}
+.produce__swiper--strainer.produce__swiper--commodity .strainer__box-img {
+  background: var(--white);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .production {
