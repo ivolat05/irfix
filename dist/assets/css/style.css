@@ -6692,6 +6692,9 @@ input:checked + .produce__tab-span::after {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.produce__swiper--strainer.produce__swiper--commodity .strainer__box {
+  background: none !important;
+}
 
 .production {
   padding-top: 65px;
