@@ -8170,9 +8170,12 @@ input:checked + .produce__tab-span::after {
 .card-row {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 600px;
+  -ms-grid-columns: 1fr 25px 600px;
   grid-template-columns: 1fr 600px;
-  gap: 25px;
+  gap: 0 25px;
+      grid-template-areas: "card--name card--img" "card--bottom card--img";
+  -ms-grid-rows: auto 0 1fr;
+  grid-template-rows: auto 1fr;
 }
 @media (max-width: 1350px) {
   .card-row {
@@ -8186,11 +8189,30 @@ input:checked + .produce__tab-span::after {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 0;
   }
+}
+
+.card--name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: card--name;
+}
+
+.card--bottom {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: card--bottom;
+}
+
+.card--img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: card--img;
 }
 
 @media (max-width: 1080px) {
