@@ -8441,6 +8441,13 @@ input:checked + .produce__tab-span::after {
   margin-top: 0;
   overflow-x: auto;
 }
+@media (max-width: 992px) {
+  .info__head {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
 
 .info-tab-span {
   font-size: 22px;
@@ -8754,16 +8761,7 @@ input:checked + .produce__tab-span::after {
   position: relative;
   isolation: isolate;
   overflow: auto;
-}
-.strainer__header-list::after {
-  content: "";
-  position: absolute;
-  bottom: 1.1px;
-  left: 0;
-  background: var(--charcoal);
-  height: 1px;
-  width: 100%;
-  opacity: 0.54;
+  border-bottom: 1px solid var(--charcoal);
 }
 
 .strainer__header-list-inner {
@@ -9157,6 +9155,10 @@ input:checked + .produce__tab-span::after {
 .contacts__dealer {
   padding-top: 43px;
 }
+.contacts__dealer h3 {
+  font-weight: 700;
+  font-size: 24px;
+}
 @media (max-width: 992px) {
   .contacts__dealer {
     padding-top: 0;
@@ -9184,7 +9186,11 @@ input:checked + .produce__tab-span::after {
 }
 
 .contacts__become {
-  padding-top: 85px;
+  padding-top: 50px;
+}
+.contacts__become h3 {
+  font-weight: 700;
+  font-size: 24px;
 }
 .contacts__become p {
   padding-top: 20px;
